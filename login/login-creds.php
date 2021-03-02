@@ -1,4 +1,4 @@
 <?php
 //login-creds.php
 $adminUser = 'admin';
-$adminPassword = 'admin';
+$adminPassword = '@dm1n';
