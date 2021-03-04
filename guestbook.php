@@ -99,7 +99,7 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="message" >Message</label>
-                    <textarea id="message" class="form-control" type="text" name="message"></textarea>
+                    <textarea id="message" class="form-control" name="message"></textarea>
                 </div>
 
             </fieldset>
