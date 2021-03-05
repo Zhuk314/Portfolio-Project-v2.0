@@ -40,6 +40,26 @@ $cnxn = mysqli_connect($hostname, $username, $password, $database);
     <h1>Admin Page</h1>
     <p>Hello Yurii</p>
 
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Guest</th>
+                <th>First name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>LinkedIn URL</th>
+                <th>Email Address</th>
+                <th>Meeting Type</th>
+                <th>Place We Met</th>
+                <th>Message</th>
+                <th>Add To Mailing List</th>
+                <th>email format</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
     <?php
     //1. Define the base query
     $sql = "SELECT * FROM `guestbook` ORDER BY `guestbook`.`date` DESC";
@@ -78,20 +98,21 @@ $cnxn = mysqli_connect($hostname, $username, $password, $database);
         $emailFormat = $row['mailing_format'];
         $time = $row['date'];
 
-        echo "<h4><b>Guest#            $count</b></h4>";
-        echo "<p>First name:          $fname</p>";
-        echo "<p>Last Name:           $lname</p>";
-        echo "<p>Job Title:           $jobTitle</p>";
-        echo "<p>Company:             $company</p>";
-        echo "<p>LinkedIn URL:        $linkedInURL</p>";
-        echo "<p>Email Address:       $emailAdd</p>";
-        echo "<p>Meeting Type:        $meetingType</p>";
-        echo "<p>Place We Met:        $placeWeMet</p>";
-        echo "<p>Message:             $message</p>";
-        echo "<p>Add To Mailing List: $addMeCheckbox</p>";
-        echo "<p>email format:        $emailFormat</p>";
-        echo "<p>Time:                $time</p>";
-        echo "<hr>";
+        echo "<tr>";
+        echo "<th><b>$count</b></th>";
+        echo "<th>$fname</th>";
+        echo "<th>$lname</th>";
+        echo "<th>$jobTitle</th>";
+        echo "<th>$company</th>";
+        echo "<th>$linkedInURL</th>";
+        echo "<th>$emailAdd</th>";
+        echo "<th>$meetingType</th>";
+        echo "<th>$placeWeMet</th>";
+        echo "<th>$message</th>";
+        echo "<th>$addMeCheckbox</th>";
+        echo "<th>$emailFormat</th>";;
+        echo "<th>$time</th>";
+        echo "<tr>";
 
         $count = $count+1;
 
